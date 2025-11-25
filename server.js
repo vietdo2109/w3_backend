@@ -1,8 +1,15 @@
 import express from "express";
 import fs from "fs";
-
+import cors from "cors";
 const app = express();
 app.use(express.json());
+// Allow Shopify + local dev to call the API
+app.use(
+  cors({
+    origin: ["https://*.myshopify.com", "https://admin.shopify.com"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+  })
+);
 
 const FILE = "./data/users.json";
 
