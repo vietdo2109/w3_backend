@@ -41,11 +41,11 @@ app.post("/api/users", (req, res) => {
 
   const nextId =
     users.length > 0
-      ? (parseInt(users[users.length - 1].id) + 1).toString()
+      ? (parseInt(users[0].id) + 1).toString() // IMPORTANT: read newest ID now at index 0
       : "1";
 
   const newUser = { id: nextId, ...req.body };
-  users.push(newUser);
+  users.unshift(newUser); // <-- NEWEST FIRST
   writeUsers(users);
   res.json(newUser);
 });
