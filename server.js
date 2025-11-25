@@ -69,3 +69,39 @@ app.delete("/api/users/:id", (req, res) => {
 });
 
 app.listen(process.env.PORT || 3000, () => console.log("Server running..."));
+
+// BULK-DELETE users
+app.post("/api/users/bulk-delete", (req, res) => {
+  let users = readUsers();
+  const idsToDelete = req.body.ids;
+
+  if (!Array.isArray(idsToDelete)) {
+    return res.status(400).json({ error: "ids must be an array" });
+  }
+
+  users = users.filter((u) => !idsToDelete.includes(u.id));
+  console.log(users);
+  writeUsers(users);
+  res.json({ success: true });
+});
+
+// BULK-CREATE users
+app.post("/api/users/bulk-create", (req, res) => {
+  let users = readUsers();
+  const usersToCreate = req.body.users;
+
+  if (!Array.isArray(usersToCreate)) {
+    return res.status(400).json({ error: "users must be an array" });
+  }
+  let nextId = parseInt(users[0].id) + 1;
+
+  for (let i = usersToCreate.length - 1; i >= 0; i--) {
+    usersToCreate[i].id = nextId.toString();
+    users.unshift(usersToCreate[i]); // <-- NEWEST FIRST
+    writeUsers(users);
+    nextId++;
+  }
+  res.json({ success: true });
+});
+
+app.listen(process.env.PORT || 3000, () => console.log("Server running..."));
