@@ -101,7 +101,7 @@ app.post("/api/users/bulk-create", (req, res) => {
     writeUsers(users);
     nextId++;
   }
-  res.json({ success: true });
+  res.json({ success: true, newUsers: usersToCreate });
 });
 
 app.listen(process.env.PORT || 3000, () => console.log("Server running..."));
