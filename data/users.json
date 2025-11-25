@@ -1,0 +1,90 @@
+[
+  {
+    "id": "1",
+    "name": "Nguyen Van A",
+    "email": "gtcv@bsscomerce.com",
+    "age": 24,
+    "gender": "Female",
+    "productTeam": "Team C"
+  },
+  {
+    "id": "2",
+    "name": "Tran Thi B",
+    "email": "tran.b@bsscommerce.com",
+    "age": 27,
+    "gender": "Female",
+    "productTeam": "Team C"
+  },
+  {
+    "id": "3",
+    "name": "Le Minh C",
+    "email": "minh.c@bsscommerce.com",
+    "age": 30,
+    "gender": "Female",
+    "productTeam": "Team C"
+  },
+  {
+    "id": "4",
+    "name": "Pham Hoang D",
+    "email": "hoang.d@bsscommerce.com",
+    "age": 22,
+    "gender": "Female",
+    "productTeam": "Team C"
+  },
+  {
+    "id": "5",
+    "name": "Do Quynh E",
+    "email": "quynh.e@bsscommerce.com",
+    "age": 25,
+    "gender": "Female",
+    "productTeam": "Team C"
+  },
+  {
+    "id": "6",
+    "name": "Vo Thi F",
+    "email": "thi.f@bsscommerce.com",
+    "age": 29,
+    "gender": "Female",
+    "productTeam": "Team C"
+  },
+  {
+    "id": "7",
+    "name": "Hoang Gia G",
+    "email": "gia.g@bsscommerce.com",
+    "age": 31,
+    "gender": "Female",
+    "productTeam": "Team C"
+  },
+  {
+    "id": "8",
+    "name": "Nguyen Thanh H",
+    "email": "thanh.h@bsscommerce.com",
+    "age": 28,
+    "gender": "Female",
+    "productTeam": "Team C"
+  },
+  {
+    "id": "9",
+    "name": "Bui Lan I",
+    "email": "lan.i@bsscommerce.com",
+    "age": 26,
+    "gender": "Female",
+    "productTeam": "Team C"
+  },
+  {
+    "id": "10",
+    "name": "Mai Duc J",
+    "email": "duc.j@bsscommerce.com",
+    "age": 23,
+    "gender": "Female",
+    "productTeam": "Team C"
+  },
+  {
+    "id": "11",
+    "name": "Vu Phuong K",
+    "email": "phuong.k@bsscommerce.com",
+    "age": 32,
+    "gender": "Female",
+    "productTeam": "Team C"
+  }
+]
